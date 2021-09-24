@@ -1,0 +1,143 @@
+@keyframes pisca{
+    0% {opacity: 0.2;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+body{
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.urna{
+    background-color: #dbd5c9;
+    padding: 30px;
+    display: flex;
+}
+
+.tela{
+    width: 500px;
+    height: 320px;
+    background: linear-gradient(to right,#E8E8E8,#C1C1C1);
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.teclado{
+    margin-left: 30px;
+    background-color: #403A3A;
+}
+
+.teclado--linha{
+    display:flex;
+    justify-content: center;
+    
+
+}
+.teclado--botão{
+    width: 90px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #555;
+}
+
+#Botão--branco{
+    background-color: white;
+    color: black;
+    font-size: 15px;
+}
+
+#Botão--corrige{
+    background-color:#F09046;
+    color: black;
+    font-size: 15px;
+}
+.pisca{
+    animation-name: pisca;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#Botão--confirma{
+    background-color: #4BC079;
+    color:black;
+    font-size: 15px;
+}
+
+.d-1{
+    flex:1;
+    display: flex;
+}
+
+.d-1left{
+    flex:1;
+    padding-left: 20px;
+}
+
+.d-1rigth{
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.d-1-1{
+    height: 50px;
+    display:flex;
+    align-items: center;
+}
+.d-1-2{
+    height: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.d-1-3{
+    height: 50px;
+
+}
+.numero{
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+}
+
+
+.d-1-4{
+    flex:1;
+    line-height: 30px;
+}
+
+.d-2{
+    height: 50px;
+    font-size: 15px;
+    border-top: 2px solid black;
+    padding-left: 3px;
+}
+
+.d-1-image{
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+}
+.d-1-image img{
+    width: 100%;
+}
+#small{
+    width: 80%;
+    font-size: 12px;
+}

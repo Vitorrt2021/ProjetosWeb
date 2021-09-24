@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.FlashCard{
+    margin-top: 20%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    background-color: rgb(222, 247, 247);
+}
+
+.Pergunta{
+    display: flex;
+    border-bottom: 2px solid black;
+    justify-content: center;
+    width: 500px;
+    height: 350px;
+    background-color: azure;
+    font-size: 30px;
+}
+
+.Ação{
+    display: flex;
+    width: 500px;
+    height: 100px;
+    background-color:bisque;
+    justify-content: space-around;
+}
+
+.Ação button{
+    margin-top: 5%;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.Inserir{
+
+    display: flex;
+    align-items:center;
+    width: 500px;
+    height: 50px;
+    border-bottom:  2px solid black;
+    border-top:  2px solid black;
+    background-color: rgb(212, 179, 243);
+}
+
+.Inserir button{
+    width: 100px;
+    height: 50px;
+
+}
