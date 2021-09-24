@@ -1,0 +1,56 @@
+body{
+    display: flex;
+}
+
+.Quadro{
+    background-color: beige;
+    width: 500px;
+    height: 700px;
+}
+.Todo{
+    display: flex;
+    width: 650px;
+    height: 700px;
+    background-color: aqua;
+}
+.Header{
+    display: flex;
+}
+.Temporizador{
+    background-color:black;
+    width: 100px;
+    height: 100px;
+}
+
+.Nivel{
+    background-color: brown;
+    width: 400px;
+    height: 100px;
+}
+
+.Cores{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Cor-Vermelho{
+    background-color: red;
+    width: 250px;
+    height: 250px;
+}
+.Cor-Amarelo{
+    background-color: yellow;
+    width: 250px;
+    height: 250px;
+}
+.Cor-Azul{
+    background-color: blue;
+    width: 250px;
+    height: 250px;
+}
+.Cor-Verde{
+    background-color: green;
+    width: 250px;
+    height: 250px;
+}
