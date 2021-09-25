@@ -1,4 +1,11 @@
 
+@keyframes troca{
+    0% {background-color:red;}
+    25%{background-color: white;}
+    50%{background-color: white;}
+    75%{background-color: white;}
+    100%{background-color:red;}
+}
 body{
     display: flex;
     font-size: 50px;
@@ -35,22 +42,22 @@ body{
     flex-wrap: wrap;
 }
 .Cor-Vermelho{
-    background-color: red;
+    background-color: rgb(253, 14, 14);
     width: 250px;
     height: 250px;
 }
 .Cor-Amarelo{
-    background-color: yellow;
+    background-color: rgb(250, 250, 10);
     width: 250px;
     height: 250px;
 }
 .Cor-Azul{
-    background-color: blue;
+    background-color: rgb(10, 10, 255);
     width: 250px;
     height: 250px;
 }
 .Cor-Verde{
-    background-color: green;
+    background-color: rgb(8, 250, 8);
     width: 250px;
     height: 250px;
 }
