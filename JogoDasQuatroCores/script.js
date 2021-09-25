@@ -1,19 +1,40 @@
-var OrdemCerta = [];
-var Numero = 0;
-var escolha =0;
 var MensagemStatus = document.querySelector(".Mensagem-Status");
+var Nivel = document.querySelector(".Nivel");
+var Contador = document.querySelector(".Temporizador");
 var Vermelho = document.querySelector(".Cor-Vermelho");
 var Amarelo = document.querySelector(".Cor-Amarelo");
 var Azul = document.querySelector(".Cor-Azul");
 var Verde = document.querySelector(".Cor-Verde");
-/*
-    1 = vermelho
-    2 = Amarelo
-    3 = Azul
-    4 = verde
-*/
-sortearPosição();
-setTimeout(aparecer, 2000,);
+var Numero = 0;
+var escolha =0;
+var OrdemCerta = [];
+
+
+function Iniciar(){
+    Reiniciar(); 
+    setTimeout(aparecer, 0);
+
+}
+function SinalizarDerrota(){
+    setTimeout(brilha, 0,5);
+    setTimeout(retorna, 500,5);
+    setTimeout(mudarHtml, 500,1);
+    setTimeout(mudarHtml,1000,0);
+}
+function mudarHtml(n){
+    if(n ==1){
+        Nivel.innerHTML = "Perdeu";
+    }else{
+        Nivel.innerHTML = "Nivel";
+    }
+}
+function Reiniciar(){
+    Numero = 0;
+    escolha =0;
+    OrdemCerta = [];
+    Contador.innerHTML = Numero;
+    sortearPosição();
+}
 
 function aparecer(){
     for(let i=0;i< Numero ; i++)
@@ -41,9 +62,12 @@ function brilha(n){
         case 3:
             document.getElementById('Azul').style.backgroundColor = 'white';                    
           break;
-        default:
+        case 4:       
             document.getElementById('Verde').style.backgroundColor = 'white';                    
-      }
+            break
+        default:
+            document.getElementById('Todo').style.backgroundColor = 'red';                             
+        }
       
       
 }
@@ -59,9 +83,13 @@ function retorna(n){
         case 3:
             document.getElementById('Azul').style.backgroundColor = 'blue';                    
           break;
-        default:
+        case 4:
             document.getElementById('Verde').style.backgroundColor = 'rgb(8, 250, 8)';                    
-      }    
+        break;
+        default:
+            document.getElementById('Todo').style.backgroundColor = 'black';                             
+        
+    }    
 }
 
 function pegarAleatorio(){
@@ -79,7 +107,7 @@ function sortearPosição(){
 }
 function ver(n){
     if(OrdemCerta[escolha] == n){
-        MensagemStatus.innerHTML = Numero + ' Foi correta' ;       
+        Contador.innerHTML = Numero;       
         escolha ++;
         if(escolha == Numero){
             sortearPosição()
@@ -89,12 +117,8 @@ function ver(n){
         mudar(n);
             
     }
-    else{
-        MensagemStatus.innerHTML = 'Perdeu' ;       
-        escolha =0;
-        Numero =0;
-        OrdemCerta = [];
-        sortearPosição();
-        setTimeout(aparecer, 3000,);
+    else{       
+        SinalizarDerrota();
+        Reiniciar();
     }
 }
